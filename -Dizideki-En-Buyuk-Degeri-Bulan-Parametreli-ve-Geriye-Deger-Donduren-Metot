@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp32
+{ /*2. Dizideki En Büyük Değeri Bulan Parametreli ve Geriye Değer Döndüren Metot
+Soru: int türünde bir dizi parametresi alan ve bu dizideki en büyük değeri bulan bir metot yazın.
+İpucu: int dönen bir metot tanımlayıp, foreach döngüsü ile diziyi dolaşarak en büyük değeri bulabilirsiniz.*/
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] sayilar = { 1, 2, 3, 4, 5 };
+            int enBuyuk = EnBuyukDeger(sayilar);
+            Console.WriteLine("Dizideki en büyük değer: " + enBuyuk);
+        }
+        static int EnBuyukDeger(int[] dizi)
+        { int enBuyuk = dizi[0]; 
+            foreach (int sayi in dizi) 
+            { 
+                if (sayi > enBuyuk) 
+                { 
+                    enBuyuk = sayi;
+                } 
+            } return enBuyuk;
+        }
+
+    }
+}
